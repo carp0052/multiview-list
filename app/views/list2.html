@@ -1,0 +1,11 @@
+<div class="container">
+<h1>Grocery List</h1>
+      <form ng-submit="add()"> <!-- gives user ability to hit return key to add item to list --> 
+				<input ng-model="groceryItem" type="text" placeholder="Add item here...">
+				<button ng-click="sendItem()" class="addBtn">Add</button>
+			</form>
+			
+			<ul class="listView">
+      	<li ng-repeat="item in $storage.items track by $index" ng-show="item != undefined">{{item.itemName}} <button ng-click="removeItem($index)">Remove</button></li>
+      </ul>
+</div>

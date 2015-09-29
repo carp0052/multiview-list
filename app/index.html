@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My AngularJS App</title>
+	<link rel="stylesheet" href="styles/styles.css">
+<!--	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">-->
+</head>
+
+<body>
+	
+	<nav>
+		<ul class="tabs">
+    	<li class="tab"><a ui-sref="main" ui-sref-active="active" class="active" id="main">To Do List</a></li>
+    	<li class="tab"><a ui-sref="list2" ui-sref-active="active" class="active" id="list2">Grocery List</a></li>
+    	<li class="tab"><a ui-sref="list3" ui-sref-active="active" class="active" id="list3">Gifts Ideas</a></li>
+		</ul>
+	</nav>
+	
+	<div ui-view></div>
+
+	
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+	<script src="../bower_components/ngstorage/ngStorage.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="controllers/main-controller.js"></script>
+	<script src="controllers/list2-controller.js"></script>
+	<script src="controllers/list3-controller.js"></script>
+	
+</body>
+</html>

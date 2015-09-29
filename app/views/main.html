@@ -1,0 +1,11 @@
+<div class="container">
+<h1>To Do List</h1>
+      <form ng-submit="add()"> <!-- gives user ability to hit return key to add item to list --> 
+				<input ng-model="todoTask" type="text" placeholder="Add task here...">
+				<button ng-click="sendTask()" class="addBtn">Add</button>
+			</form>
+			
+			<ul class="listView">
+      	<li ng-repeat="task in $storage.tasks track by $index" ng-show="task != undefined">{{task.taskName}} <button ng-click="removeTask($index)">Remove</button></li>
+      </ul>
+</div>
